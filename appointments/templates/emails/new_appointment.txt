@@ -1,0 +1,26 @@
+New booking received
+====================
+
+Booking reference: {{ appointment.booking_reference }}
+Status:            {{ appointment.get_status_display }}
+
+Client
+------
+Name:  {{ appointment.client_name }}
+Email: {{ appointment.client_email }}
+Phone: {{ appointment.client_phone }}
+WhatsApp: {{ wa_link }}
+
+Session
+-------
+Service: {{ appointment.service.name }}
+Date:    {{ appointment.appointment_date|date:"l, j F Y" }}
+Time:    {{ appointment.slot.start_time|time:"g:i A" }} - {{ appointment.slot.end_time|time:"g:i A" }}
+Type:    {{ appointment.get_appointment_type_display }}
+
+{% if appointment.client_notes %}Client notes
+------------
+{{ appointment.client_notes }}
+{% endif %}
+Confirm or decline in the admin:
+{{ admin_url }}

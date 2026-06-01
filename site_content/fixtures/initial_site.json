@@ -1,0 +1,31 @@
+[
+  {
+    "model": "site_content.paymentinstruction",
+    "pk": "2e7c1f2c-6c4d-4a3b-9a4a-000000000001",
+    "fields": {
+      "bank_name": "Meezan Bank",
+      "account_title": "Maria Shoaib",
+      "account_number": "0000-0000000-000",
+      "iban": "PK00MEZN0000000000000000",
+      "whatsapp_number": "+923000000000",
+      "payment_note": "After transferring the consultation fee, please send a screenshot on WhatsApp along with your booking reference.",
+      "created_at": "2026-06-02T00:00:00Z",
+      "updated_at": "2026-06-02T00:00:00Z"
+    }
+  },
+  {
+    "model": "site_content.sitesettings",
+    "pk": "3e7c1f2c-6c4d-4a3b-9a4a-000000000001",
+    "fields": {
+      "clients_helped": 320,
+      "years_experience": 4,
+      "conditions_treated": 18,
+      "sessions_conducted": 950,
+      "about_text": "I'm Maria Shoaib, a clinical dietitian and nutritionist trained at UVAS Lahore. I work one-on-one with clients across Pakistan to build nutrition plans that fit their real lives \u2014 our food, our routines, our cultural context. My approach is evidence-based, never restrictive, and built around outcomes you can actually sustain.",
+      "philosophy_quote": "Good nutrition isn't a punishment. It's a plan you can live with \u2014 one that respects your kitchen, your family, and your goals.",
+      "profile_photo": "",
+      "created_at": "2026-06-02T00:00:00Z",
+      "updated_at": "2026-06-02T00:00:00Z"
+    }
+  }
+]

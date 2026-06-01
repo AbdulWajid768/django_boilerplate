@@ -1,0 +1,142 @@
+[
+  {
+    "model": "services.service",
+    "pk": "1d7c1f2c-6c4d-4a3b-9a4a-000000000001",
+    "fields": {
+      "name": "Weight Management",
+      "slug": "weight-management",
+      "description": "Sustainable, evidence-based plans tailored to your routine, food preferences, and goals. No crash diets, no banned-food lists \u2014 just a steady, livable approach to reaching and maintaining a healthy weight.",
+      "short_description": "Sustainable plans built around your life \u2014 no crash diets.",
+      "icon": "\u2696\ufe0f",
+      "duration_minutes": 45,
+      "fee_online": "3500.00",
+      "fee_inperson": "4500.00",
+      "available_online": true,
+      "available_inperson": true,
+      "is_active": true,
+      "display_order": 1,
+      "created_at": "2026-06-02T00:00:00Z",
+      "updated_at": "2026-06-02T00:00:00Z"
+    }
+  },
+  {
+    "model": "services.service",
+    "pk": "1d7c1f2c-6c4d-4a3b-9a4a-000000000002",
+    "fields": {
+      "name": "Clinical Nutrition",
+      "slug": "clinical-nutrition",
+      "description": "Personalised medical-nutrition therapy for diabetes, PCOS, hypertension, thyroid disorders, and kidney disease. Plans built around your lab work and Pakistani eating habits.",
+      "short_description": "Diabetes, PCOS, hypertension, thyroid, kidney disease.",
+      "icon": "\ud83e\ude7a",
+      "duration_minutes": 60,
+      "fee_online": "4500.00",
+      "fee_inperson": "5500.00",
+      "available_online": true,
+      "available_inperson": true,
+      "is_active": true,
+      "display_order": 2,
+      "created_at": "2026-06-02T00:00:00Z",
+      "updated_at": "2026-06-02T00:00:00Z"
+    }
+  },
+  {
+    "model": "services.service",
+    "pk": "1d7c1f2c-6c4d-4a3b-9a4a-000000000003",
+    "fields": {
+      "name": "Prenatal & Postnatal Nutrition",
+      "slug": "prenatal-postnatal-nutrition",
+      "description": "Trimester-specific guidance during pregnancy, plus postpartum recovery and breastfeeding nutrition support \u2014 nourishment for you and your baby.",
+      "short_description": "Trimester-specific plans + breastfeeding support.",
+      "icon": "\ud83e\udd30",
+      "duration_minutes": 60,
+      "fee_online": "4000.00",
+      "fee_inperson": "5000.00",
+      "available_online": true,
+      "available_inperson": true,
+      "is_active": true,
+      "display_order": 3,
+      "created_at": "2026-06-02T00:00:00Z",
+      "updated_at": "2026-06-02T00:00:00Z"
+    }
+  },
+  {
+    "model": "services.service",
+    "pk": "1d7c1f2c-6c4d-4a3b-9a4a-000000000004",
+    "fields": {
+      "name": "Sports & Performance Nutrition",
+      "slug": "sports-performance-nutrition",
+      "description": "Macro planning, pre/post-workout fueling, hydration and recovery strategies for athletes, gym-goers, and active professionals.",
+      "short_description": "Macro planning, fueling, and recovery for athletes.",
+      "icon": "\ud83c\udfc3",
+      "duration_minutes": 45,
+      "fee_online": "3500.00",
+      "fee_inperson": "4500.00",
+      "available_online": true,
+      "available_inperson": true,
+      "is_active": true,
+      "display_order": 4,
+      "created_at": "2026-06-02T00:00:00Z",
+      "updated_at": "2026-06-02T00:00:00Z"
+    }
+  },
+  {
+    "model": "services.service",
+    "pk": "1d7c1f2c-6c4d-4a3b-9a4a-000000000005",
+    "fields": {
+      "name": "Paediatric Nutrition",
+      "slug": "paediatric-nutrition",
+      "description": "Growth-assessment-led plans for children and adolescents \u2014 picky eating, weight concerns, anaemia, and balanced school-going routines.",
+      "short_description": "Children & adolescents \u2014 growth, picky eating, anaemia.",
+      "icon": "\ud83e\uddd2",
+      "duration_minutes": 45,
+      "fee_online": "3500.00",
+      "fee_inperson": "4500.00",
+      "available_online": true,
+      "available_inperson": true,
+      "is_active": true,
+      "display_order": 5,
+      "created_at": "2026-06-02T00:00:00Z",
+      "updated_at": "2026-06-02T00:00:00Z"
+    }
+  },
+  {
+    "model": "services.service",
+    "pk": "1d7c1f2c-6c4d-4a3b-9a4a-000000000006",
+    "fields": {
+      "name": "Lab Report Interpretation",
+      "slug": "lab-report-interpretation",
+      "description": "Send in your most recent blood panel \u2014 we'll review it together and translate it into a nutrition intervention you can actually follow.",
+      "short_description": "Blood-panel review + a nutrition plan you can follow.",
+      "icon": "\ud83e\uddea",
+      "duration_minutes": 45,
+      "fee_online": "3000.00",
+      "fee_inperson": "4000.00",
+      "available_online": true,
+      "available_inperson": true,
+      "is_active": true,
+      "display_order": 6,
+      "created_at": "2026-06-02T00:00:00Z",
+      "updated_at": "2026-06-02T00:00:00Z"
+    }
+  },
+  {
+    "model": "services.service",
+    "pk": "1d7c1f2c-6c4d-4a3b-9a4a-000000000007",
+    "fields": {
+      "name": "General Diet Assessment",
+      "slug": "general-diet-assessment",
+      "description": "A one-time review of what you currently eat and how you live, with clear, prioritised recommendations \u2014 ideal if you just want a credible second opinion.",
+      "short_description": "One-time review with prioritised recommendations.",
+      "icon": "\ud83d\udccb",
+      "duration_minutes": 30,
+      "fee_online": "2500.00",
+      "fee_inperson": "3500.00",
+      "available_online": true,
+      "available_inperson": true,
+      "is_active": true,
+      "display_order": 7,
+      "created_at": "2026-06-02T00:00:00Z",
+      "updated_at": "2026-06-02T00:00:00Z"
+    }
+  }
+]

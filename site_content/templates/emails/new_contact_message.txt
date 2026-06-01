@@ -1,0 +1,13 @@
+New contact message
+===================
+
+From: {{ message.name }} <{{ message.email }}>
+{% if message.phone %}Phone: {{ message.phone }}{% endif %}
+Received: {{ message.created_at|date:"l, j F Y g:i A" }}
+
+Message
+-------
+{{ message.message }}
+
+Open in admin:
+{{ admin_url }}

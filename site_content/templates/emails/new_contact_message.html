@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>New contact message</title>
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; background:#FAF9F4; color:#2C2C2A; margin:0; padding:24px;">
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px; margin:0 auto; background:#FFFFFF; border:1px solid #D3D1C7; border-radius:12px; overflow:hidden;">
+    <tr>
+      <td style="background:#854F0B; color:#FFFFFF; padding:24px 28px;">
+        <div style="font-family: 'DM Serif Display', Georgia, serif; font-size:24px; line-height:1.2;">New contact message</div>
+        <div style="font-size:13px; opacity:0.85; margin-top:4px;">{{ message.created_at|date:"l, j F Y g:i A" }}</div>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:24px 28px;">
+        <p style="margin:0 0 6px;"><strong>{{ message.name }}</strong></p>
+        <p style="margin:0 0 6px;"><a href="mailto:{{ message.email }}" style="color:#3B6D11;">{{ message.email }}</a></p>
+        {% if message.phone %}<p style="margin:0 0 6px;">{{ message.phone }}</p>{% endif %}
+
+        <h2 style="font-size:14px; text-transform:uppercase; letter-spacing:0.08em; color:#5F5E5A; margin:24px 0 12px;">Message</h2>
+        <p style="background:#FAEEDA; border-left:3px solid #854F0B; padding:14px 16px; margin:0; border-radius:6px; white-space:pre-wrap;">{{ message.message }}</p>
+
+        <div style="margin-top:28px;">
+          <a href="{{ admin_url }}" style="display:inline-block; background:#3B6D11; color:#FFFFFF; padding:12px 20px; border-radius:999px; text-decoration:none; font-weight:600;">Open in admin</a>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="background:#EAF3DE; color:#5F5E5A; padding:14px 28px; font-size:12px;">
+        Sent automatically by mariashoaib.com.
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

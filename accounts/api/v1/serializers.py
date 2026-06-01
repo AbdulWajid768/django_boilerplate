@@ -1,15 +1,17 @@
+"""Serializers for accounts v1 APIs."""
 from rest_framework import serializers
 
-from accounts.models import User
-from django.contrib.auth.password_validation import validate_password
+from accounts.models import Client
 
 
-class SignupSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(validators=[validate_password])
+class ClientProfileSerializer(serializers.ModelSerializer):
+    """Serializer for the logged-in client's profile (phone editable, rest read-only)."""
+
+    email = serializers.EmailField(source='user.email', read_only=True)
+    first_name = serializers.CharField(source='user.first_name', read_only=True)
+    last_name = serializers.CharField(source='user.last_name', read_only=True)
 
     class Meta:
-        model = User
-        fields = ('first_name', 'last_name', 'email', 'password')
-
-    def create(self, validated_data):
-        return User.objects.create_user(**validated_data)
+        model = Client
+        fields = ['id', 'email', 'first_name', 'last_name', 'phone', 'profile_complete']
+        read_only_fields = ['id', 'email', 'first_name', 'last_name', 'profile_complete']

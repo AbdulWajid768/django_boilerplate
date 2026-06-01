@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>New booking received</title>
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; background:#FAF9F4; color:#2C2C2A; margin:0; padding:24px;">
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px; margin:0 auto; background:#FFFFFF; border:1px solid #D3D1C7; border-radius:12px; overflow:hidden;">
+    <tr>
+      <td style="background:#3B6D11; color:#FFFFFF; padding:24px 28px;">
+        <div style="font-family: 'DM Serif Display', Georgia, serif; font-size:24px; line-height:1.2;">New booking received</div>
+        <div style="font-size:13px; opacity:0.85; margin-top:4px;">Booking reference: <strong>{{ appointment.booking_reference }}</strong></div>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:24px 28px;">
+        <h2 style="font-size:14px; text-transform:uppercase; letter-spacing:0.08em; color:#5F5E5A; margin:0 0 12px;">Client</h2>
+        <p style="margin:0 0 6px;"><strong>{{ appointment.client_name }}</strong></p>
+        <p style="margin:0 0 6px;">{{ appointment.client_email }}</p>
+        <p style="margin:0 0 6px;">
+          {{ appointment.client_phone }}
+          &nbsp;&middot;&nbsp;<a href="{{ wa_link }}" style="color:#3B6D11;">WhatsApp</a>
+          &nbsp;&middot;&nbsp;<a href="{{ tel_link }}" style="color:#3B6D11;">Call</a>
+        </p>
+
+        <h2 style="font-size:14px; text-transform:uppercase; letter-spacing:0.08em; color:#5F5E5A; margin:24px 0 12px;">Session</h2>
+        <table cellpadding="0" cellspacing="0" style="width:100%; border-collapse:collapse;">
+          <tr>
+            <td style="padding:6px 0; width:120px; color:#5F5E5A;">Service</td>
+            <td style="padding:6px 0;"><strong>{{ appointment.service.name }}</strong></td>
+          </tr>
+          <tr>
+            <td style="padding:6px 0; color:#5F5E5A;">Date</td>
+            <td style="padding:6px 0;">{{ appointment.appointment_date|date:"l, j F Y" }}</td>
+          </tr>
+          <tr>
+            <td style="padding:6px 0; color:#5F5E5A;">Time</td>
+            <td style="padding:6px 0;">{{ appointment.slot.start_time|time:"g:i A" }} &ndash; {{ appointment.slot.end_time|time:"g:i A" }}</td>
+          </tr>
+          <tr>
+            <td style="padding:6px 0; color:#5F5E5A;">Type</td>
+            <td style="padding:6px 0;">{{ appointment.get_appointment_type_display }}</td>
+          </tr>
+        </table>
+
+        {% if appointment.client_notes %}
+        <h2 style="font-size:14px; text-transform:uppercase; letter-spacing:0.08em; color:#5F5E5A; margin:24px 0 12px;">Client notes</h2>
+        <p style="background:#FAEEDA; border-left:3px solid #854F0B; padding:12px 14px; margin:0; border-radius:6px;">{{ appointment.client_notes|linebreaksbr }}</p>
+        {% endif %}
+
+        <div style="margin-top:28px;">
+          <a href="{{ admin_url }}" style="display:inline-block; background:#3B6D11; color:#FFFFFF; padding:12px 20px; border-radius:999px; text-decoration:none; font-weight:600;">Open in admin</a>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="background:#EAF3DE; color:#5F5E5A; padding:14px 28px; font-size:12px;">
+        Sent automatically by mariashoaib.com. Reply directly to the client at {{ appointment.client_email }}.
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
