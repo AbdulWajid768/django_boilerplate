@@ -172,7 +172,11 @@ stateDiagram-v2
 
 <br/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=AbdulWajid768&theme=react-dark&hide_border=true&bg_color=0d1117&color=00d4aa&line=7c3aed&point=0891b2&area=true&height=280" alt="Contribution activity graph"/>
+<a href="https://github.com/AbdulWajid768">
+  <img src="assets/github-activity-graph.svg" alt="Contribution activity graph" width="100%"/>
+</a>
+
+<sub>Auto-refreshed daily via GitHub Actions (replaces paused Vercel activity-graph API).</sub>
 
 <br/>
 
