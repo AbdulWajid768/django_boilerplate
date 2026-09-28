@@ -28,8 +28,8 @@
 
 <br/>
 
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=AbdulWajid768&repo=django_boilerplate&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d4aa&icon_color=7c3aed&text_color=c9d1d9&border_radius=12" width="48%"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AbdulWajid768&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d4aa&text_color=c9d1d9&layout=compact&border_radius=12" width="48%"/>
+<img src="https://gh-stats.work/api/pin/?username=AbdulWajid768&repo=django_boilerplate&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d4aa&icon_color=7c3aed&text_color=c9d1d9&border_radius=12" width="48%"/>
+<img src="https://gh-stats.work/api/top-langs/?username=AbdulWajid768&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d4aa&text_color=c9d1d9&layout=compact&border_radius=12" width="48%"/>
 
 <br/><br/>
 
@@ -187,7 +187,7 @@ stateDiagram-v2
 
 <br/>
 
-<img src="https://komarev.com/ghpvc/?username=AbdulWajid768-django_boilerplate&label=NEURAL%20VIEWS&color=00d4aa&style=for-the-badge" alt="views"/>
+<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/AbdulWajid768/django_boilerplate&count.shadow=false&label=NEURAL%20VIEWS&color=00d4aa&labelColor=0f172a" alt="views"/>
 
 <sub>Forge the backend · Ship the next timeline.</sub>
 
