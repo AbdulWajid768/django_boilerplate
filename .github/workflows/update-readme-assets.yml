@@ -1,0 +1,38 @@
+name: Update README assets
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch stats cards
+        run: |
+          mkdir -p assets
+          curl -fsSL "https://gh-stats.work/api/pin/?username=AbdulWajid768&repo=django_boilerplate&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d4aa&icon_color=7c3aed&text_color=c9d1d9&border_radius=12" -o assets/stats-pin.svg
+          curl -fsSL "https://gh-stats.work/api/top-langs/?username=AbdulWajid768&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d4aa&text_color=c9d1d9&layout=compact&border_radius=12" -o assets/stats-top-langs.svg
+
+      - name: Generate activity graph
+        uses: maurodesouza/github-readme-activity-graph-action@v1
+        with:
+          username: AbdulWajid768
+          options: theme=react-dark&hide_border=true&bg_color=0d1117&color=00d4aa&line=7c3aed&point=0891b2&area=true&height=280
+          output_path: assets/github-activity-graph.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/stats-pin.svg assets/stats-top-langs.svg assets/github-activity-graph.svg
+          git diff --staged --quiet && echo "No asset changes" && exit 0
+          git commit -m "chore(docs): refresh README assets"
+          git push
